@@ -1,0 +1,37 @@
+.legal-page {
+  min-height: 650px;
+  padding: 6rem 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(218,165,67,.09), transparent 25%),
+    #100704;
+}
+
+.legal-container {
+  max-width: 900px;
+}
+
+.legal-page h1 {
+  margin: .7rem 0 2rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.legal-card {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(218,165,67,.2);
+  border-radius: 24px;
+  background: rgba(255,255,255,.025);
+}
+
+.legal-card h2 {
+  color: var(--gold-light);
+  font-family: Georgia, serif;
+  margin-top: 1.7rem;
+}
+
+.legal-card h2:first-child { margin-top: 0; }
+
+.legal-card p {
+  color: #b09b85;
+  line-height: 1.8;
+}

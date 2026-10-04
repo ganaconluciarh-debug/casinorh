@@ -1,0 +1,72 @@
+.contact-page {
+  min-height: 650px;
+  padding: 6rem 0;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(218,165,67,.12), transparent 25%),
+    #100704;
+}
+
+.contact-container {
+  max-width: 1000px;
+}
+
+.contact-intro h1 {
+  margin: .5rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+}
+
+.contact-intro p {
+  max-width: 600px;
+  color: #a58e78;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  min-height: 270px;
+  padding: 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(218,165,67,.2);
+  background: linear-gradient(145deg, #2a1408, #130805);
+}
+
+.contact-card--main {
+  background:
+    radial-gradient(circle at 90% 0, rgba(218,165,67,.18), transparent 30%),
+    linear-gradient(145deg, #321708, #130805);
+}
+
+.contact-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(218,165,67,.1);
+  border: 1px solid rgba(218,165,67,.25);
+  font-size: 1.5rem;
+}
+
+.contact-card h2 {
+  font-family: Georgia, serif;
+  color: var(--cream);
+  margin: 1rem 0 .4rem;
+}
+
+.contact-card p {
+  color: #9f8b75;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .contact-page { padding: 4rem 0; }
+  .contact-grid { grid-template-columns: 1fr; }
+}

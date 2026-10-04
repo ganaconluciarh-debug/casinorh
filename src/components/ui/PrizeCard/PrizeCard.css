@@ -1,0 +1,78 @@
+.prize-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 285px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(218,165,67,.35);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 75% 15%, rgba(255,205,91,.18), transparent 28%),
+    linear-gradient(145deg, #2b160a, #120906 72%);
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.prize-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255,211,111,.75);
+}
+
+.prize-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -70px;
+  right: -50px;
+  border-radius: 50%;
+  background: rgba(255,196,63,.12);
+  filter: blur(4px);
+}
+
+.prize-icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.35rem;
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: #3b2007;
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(145deg, #ffeab0, var(--gold), #a8610d);
+}
+
+.prize-category {
+  position: relative;
+  color: var(--gold-light);
+  font-size: .67rem;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.prize-card h3 {
+  position: relative;
+  margin: .45rem 0;
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.prize-card strong {
+  position: relative;
+  color: #ffe2a0;
+  font-size: 1.8rem;
+}
+
+.prize-chip {
+  position: absolute;
+  left: 1.6rem;
+  top: 1.6rem;
+  color: #9d7843;
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .15em;
+}

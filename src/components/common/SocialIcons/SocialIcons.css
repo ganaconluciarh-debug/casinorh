@@ -1,0 +1,31 @@
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: .72rem;
+  font-weight: 900;
+  border: 1px solid rgba(218,165,67,.35);
+  background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.025));
+  transition: .2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) rotate(-3deg);
+  color: #1b1008;
+  background: var(--gold);
+}
+
+.social-icons--compact .social-icon {
+  width: 36px;
+  height: 36px;
+}

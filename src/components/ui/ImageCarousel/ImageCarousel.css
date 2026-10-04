@@ -1,0 +1,372 @@
+.image-carousel {
+  position: relative;
+  width: 100%;
+
+  /* Mantiene siempre proporción 16:9 */
+  aspect-ratio: 16 / 9;
+
+  /* Evita que la imagen se salga */
+  overflow: hidden;
+
+  border: 1px solid rgba(218, 165, 67, 0.35);
+  border-radius: 28px;
+
+  background: #120805;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(218, 165, 67, 0.08);
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+.carousel-slide--active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* =========================================
+   IMAGEN
+   ========================================= */
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+
+  /*
+   * IMPORTANTE:
+   * contain evita que la imagen sea recortada.
+   */
+  object-fit: contain;
+
+  object-position: center;
+
+  display: block;
+
+  /*
+   * No usamos scale(1.05), porque volvería
+   * a cortar los bordes de la imagen.
+   */
+  transform: scale(1);
+
+  transition: transform 6s ease;
+}
+
+/*
+ * Efecto de movimiento muy sutil.
+ * 1.01 mantiene prácticamente toda la imagen.
+ */
+.carousel-slide--active .carousel-image {
+  transform: scale(1.01);
+}
+
+/* =========================================
+   OVERLAY
+   ========================================= */
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 4, 2, 0.88) 0%,
+      rgba(10, 4, 2, 0.65) 35%,
+      rgba(10, 4, 2, 0.15) 75%,
+      rgba(10, 4, 2, 0.3) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10, 4, 2, 0.75) 0%,
+      transparent 55%
+    );
+}
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.carousel-content {
+  position: absolute;
+  z-index: 5;
+
+  left: 7%;
+  bottom: 18%;
+
+  max-width: 600px;
+}
+
+.carousel-label {
+  display: inline-block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--gold-light);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.carousel-content h2 {
+  margin: 0 0 0.8rem;
+
+  color: var(--cream);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+
+  line-height: 1;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(218, 165, 67, 0.15);
+}
+
+.carousel-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #d8c5ad;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.carousel-button {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 220, 140, 0.4);
+
+  border-radius: 50%;
+
+  color: var(--cream);
+
+  background: rgba(10, 5, 2, 0.55);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 2.4rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.carousel-button:hover {
+  color: #1b1008;
+
+  background: var(--gold-light);
+
+  border-color: var(--gold-light);
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-button--prev {
+  left: 20px;
+}
+
+.carousel-button--next {
+  right: 20px;
+}
+
+/* =========================================
+   INDICADORES
+   ========================================= */
+
+.carousel-dots {
+  position: absolute;
+
+  z-index: 10;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.carousel-dot:hover {
+  transform: scale(1.25);
+}
+
+.carousel-dot--active {
+  width: 30px;
+
+  border-radius: 999px;
+
+  background: var(--gold-light);
+
+  box-shadow:
+    0 0 10px rgba(245, 211, 126, 0.5);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .image-carousel {
+    aspect-ratio: 16 / 9;
+    height: auto;
+
+    border-radius: 22px;
+  }
+
+  .carousel-content {
+    left: 7%;
+    bottom: 17%;
+
+    max-width: 70%;
+  }
+
+  .carousel-content h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .carousel-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .image-carousel {
+    /*
+     * Seguimos usando 16:9.
+     * Esto evita que el banner se recorte.
+     */
+    aspect-ratio: 16 / 9;
+
+    height: auto;
+
+    border-radius: 16px;
+  }
+
+  .carousel-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(10, 4, 2, 0.92) 0%,
+        rgba(10, 4, 2, 0.4) 65%,
+        rgba(10, 4, 2, 0.15) 100%
+      );
+  }
+
+  .carousel-content {
+    left: 6%;
+    right: 6%;
+
+    bottom: 17%;
+
+    max-width: none;
+  }
+
+  .carousel-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+  }
+
+  .carousel-label {
+    font-size: 0.6rem;
+  }
+
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.8rem;
+  }
+
+  .carousel-button--prev {
+    left: 10px;
+  }
+
+  .carousel-button--next {
+    right: 10px;
+  }
+
+  .carousel-dots {
+    bottom: 10px;
+  }
+}
