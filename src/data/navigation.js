@@ -1,6 +1,5 @@
 export const navigationLinks = [
   { label: "Inicio", path: "/" },
-  { label: "Premios", path: "/#premios" },
   { label: "Condiciones", path: "/condiciones" },
   { label: "Contacto", path: "/contacto" }
 ];
