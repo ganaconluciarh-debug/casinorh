@@ -1,5 +1,6 @@
-import Welcome from "../../components/ui/welcome/Welcome"
+
 import ImageCarousel from "../../components/ui/ImageCarousel/ImageCarousel"
+import Welcome from "../../components/ui/welcome/Welcome"
 
 
 const Incio = () => {
@@ -7,7 +8,7 @@ const Incio = () => {
 
     return(
         <>
-        <Welcome /> 
+        <Welcome />
         <ImageCarousel />
         </>
     )
