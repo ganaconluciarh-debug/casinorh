@@ -1,7 +1,5 @@
-import './Welcome.css';
+import './welcome.css';
 import Bienvenido from "../../../assets/images/bienvenido.gif"
-
-import "./Welcome.css";
 
 function Welcome({
   alt = "Bienvenido a RH Club",
