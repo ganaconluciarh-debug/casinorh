@@ -19,10 +19,7 @@ function Footer() {
           <Link to="/contacto">Contacto</Link>
         </div>
 
-        <div>
-          <h3>Seguinos</h3>
-          <SocialIcons compact />
-        </div>
+        
       </div>
 
       <div className="footer-bottom">

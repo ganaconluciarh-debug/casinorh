@@ -1,4 +1,11 @@
+import "../Button/botonwhatsapp.css"
+
 const BotonWhatsapp = () =>{
+
+    const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "5491100000000";
+    const whatsappMessage = encodeURIComponent(
+    import.meta.env.VITE_WHATSAPP_MESSAGE || "Hola, quiero consultar por las promociones."
+    );
 
     return(
         <>
@@ -18,3 +25,5 @@ const BotonWhatsapp = () =>{
     )
 
 }
+
+export default BotonWhatsapp
