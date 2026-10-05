@@ -25,12 +25,6 @@ function Contact() {
               Abrir WhatsApp
             </Button>
           </div>
-
-          <div className="contact-card">
-            <span className="contact-icon">◎</span>
-            <h2>Redes sociales</h2>
-            <p>Seguinos para conocer novedades y promociones.</p>
-          </div>
         </div>
       </div>
     </section>
