@@ -4,12 +4,14 @@ import Footer from "./components/layout/Footer/Footer";
 import Inicio from "./pages/Home/Inicio";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import BotonWhatsapp from "./components/common/Button/BotonWhatsapp";
 
 
 function App() {
   return (
     <div className="app">
-      <Header />    
+      <Header />
+      <BotonWhatsapp />    
       <main>
         <Routes>
           <Route path="/" element={<Inicio />} />

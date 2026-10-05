@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SocialIcons from "../../common/SocialIcons/SocialIcons";
 import "./Footer.css";
 import MiLogo from "../../../assets/images/logo.png"
 

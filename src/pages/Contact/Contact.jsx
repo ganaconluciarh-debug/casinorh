@@ -1,5 +1,4 @@
 import Button from "../../components/common/Button/Button";
-import SocialIcons from "../../components/common/SocialIcons/SocialIcons";
 import "./Contact.css";
 
 function Contact() {
@@ -21,7 +20,7 @@ function Contact() {
           <div className="contact-card contact-card--main">
             <span className="contact-icon">💬</span>
             <h2>WhatsApp</h2>
-            <p>Atención directa para resolver tus consultas.</p>
+            <p>Atención directa para cargar fichas o resolver tus consultas.</p>
             <Button href={`https://wa.me/${number}?text=${message}`} variant="whatsapp" target="_blank">
               Abrir WhatsApp
             </Button>
@@ -31,7 +30,6 @@ function Contact() {
             <span className="contact-icon">◎</span>
             <h2>Redes sociales</h2>
             <p>Seguinos para conocer novedades y promociones.</p>
-            <SocialIcons />
           </div>
         </div>
       </div>
