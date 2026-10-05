@@ -5,16 +5,18 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ImageCarousel from "./components/ui/ImageCarousel/ImageCarousel";
-import PrizeCard from "./components/ui/PrizeCard/PrizeCard";
+import Welcome from "./components/ui/welcome/Welcome";
 
 function App() {
   return (
     <div className="app">
       <Header />
+      <Welcome />
+      <ImageCarousel />
+      
       <main>
         <Routes>
-          <Route path="/" element={<ImageCarousel />} />
-          <Route path="/" element={<PrizeCard />} />
+          <Route path="/" element={<Home />} />
           <Route path="/condiciones" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
         </Routes>

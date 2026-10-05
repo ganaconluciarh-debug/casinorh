@@ -1,0 +1,85 @@
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.welcome {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================================
+   CONTENEDOR 16:9
+   ========================================= */
+
+.welcome-container {
+  position: relative;
+
+  width: 100%;
+
+  /*
+   * Mantiene siempre una proporción 16:9
+   */
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: #120805;
+
+  border: 1px solid rgba(218, 165, 67, 0.35);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(218, 165, 67, 0.08);
+}
+
+/* =========================================
+   GIF
+   ========================================= */
+
+.welcome-gif {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+   * Muestra el GIF completo sin deformarlo
+   */
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #120805;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .welcome-container {
+    border-radius: 22px;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .welcome-container {
+    /*
+     * Sigue siendo 16:9
+     */
+    aspect-ratio: 16 / 9;
+
+    border-radius: 16px;
+  }
+
+}
