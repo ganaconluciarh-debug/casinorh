@@ -1,4 +1,4 @@
-import "../Button/botonwhatsapp.css"
+import "./botonWhatsapp.css"
 
 const BotonWhatsapp = () =>{
 
