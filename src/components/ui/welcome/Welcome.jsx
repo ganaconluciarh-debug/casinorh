@@ -1,4 +1,4 @@
-import './Welcome.css';
+import './Welcome2.css';
 import Bienvenido from "../../../assets/images/bienvenido.gif"
 
 function Welcome({
