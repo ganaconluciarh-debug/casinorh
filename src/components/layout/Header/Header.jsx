@@ -34,7 +34,7 @@ function Header() {
             </Link>
           ))}
           <Button
-            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || "5491170996259"}`}
+            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || "5491164822231"}`}
             variant="primary"
             target="_blank"
           >
