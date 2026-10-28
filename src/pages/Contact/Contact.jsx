@@ -2,7 +2,7 @@ import Button from "../../components/common/Button/Button";
 import "./Contact.css";
 
 function Contact() {
-  const number = import.meta.env.VITE_WHATSAPP_NUMBER || "5491100000000";
+  const number = "5491164822231";
   const message = encodeURIComponent(
     import.meta.env.VITE_WHATSAPP_MESSAGE || "Hola, quiero realizar una consulta."
   );
